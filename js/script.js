@@ -21,12 +21,36 @@ let playerMove = 'nieznany ruch';
 if(playerInput == '1'){
   playerMove = 'kamień';
 } else if(playerInput == '2'){
-    playerMove = 'papier';
-  } else if(playerInput == '3'){
-    playerMove = 'nożyce';
-  }
+  playerMove = 'papier';
+} else if(playerInput == '3'){
+  playerMove = 'nożyce';
+} else { 
+    alert('Wprowadź poprawną liczbę!');
+    location.reload();
+}
 
-printMessage('Twój ruch to: ' + playerMove + '. Mój ruch to ' + computerMove + '. Kto wygrał?');
+printMessage('Mój ruch to: ' + computerMove + '. Twój to: ' + playerMove + '.')
+
+if (computerMove == playerMove){
+    printMessage('Remis!');
+} 
+
+else if (computerMove == 'papier' && playerMove == 'nożyce'){
+    printMessage('Wygrałeś!');
+} else if (computerMove == 'nożyce' && playerMove == 'kamień'){
+    printMessage('Wygrałeś!');
+} else if (computerMove == 'kamień' && playerMove == 'papier'){
+    printMessage('Wygrałeś!');
+} 
+
+else if (computerMove == 'papier' && playerMove == 'kamień'){
+    printMessage('Przegrałeś!');
+} else if (computerMove == 'nożyce' && playerMove == 'papier'){
+    printMessage('Przegrałeś!');
+} else if (computerMove == 'kamień' && playerMove == 'nożyce'){
+    printMessage('Przegrałeś!');
+}
+
 
 
 
