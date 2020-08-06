@@ -10,6 +10,7 @@
     "init:gitignore": "curl https://raw.githubusercontent.com/github/gitignore/master/Node.gitignore -o .gitignore",
     "test": "npm-run-all test:*",
     "test:html": "html-validate *.html",
+    "test:js": "test-js js/*.js"
     "build": "npm-run-all build:* && npm run test",
     "build:sass": "node-sass --output-style compact -o css sass",
     "build:autoprefixer": "autoprefixer-cli css/style.css",
@@ -32,6 +33,7 @@
     "onchange": "^7.0.2"
   },
   "dependencies": {
+    "test-js": "0.0.4",
     "touch-cli": "0.0.1"
   }
 }
