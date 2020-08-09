@@ -1,8 +1,8 @@
+
 let x = 0;
 let y = 0;
 
 printResult('gracz: ' + x + '  Komputer: ' + y);
-
 
 function playGame(playerInput) {
 
